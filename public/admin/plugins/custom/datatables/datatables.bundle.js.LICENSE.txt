@@ -1,0 +1,103 @@
+/*!
+ * Column visibility buttons for Buttons and DataTables.
+ * 2016 SpryMedia Ltd - datatables.net/license
+ */
+
+/*!
+ * Flash export buttons for Buttons and DataTables.
+ * 2015-2017 SpryMedia Ltd - datatables.net/license
+ *
+ * ZeroClipbaord - MIT license
+ * Copyright (c) 2012 Joseph Huckaby
+ */
+
+/*!
+ * HTML5 export buttons for Buttons and DataTables.
+ * 2016 SpryMedia Ltd - datatables.net/license
+ *
+ * FileSaver.js (1.3.3) - MIT license
+ * Copyright © 2016 Eli Grey - http://eligrey.com
+ */
+
+/*!
+ * Print button for Buttons and DataTables.
+ * 2016 SpryMedia Ltd - datatables.net/license
+ */
+
+/*!
+ AutoFill 2.3.5
+ ©2008-2020 SpryMedia Ltd - datatables.net/license
+*/
+
+/*!
+ Bootstrap 4 integration for DataTables' Responsive
+ ©2016 SpryMedia Ltd - datatables.net/license
+*/
+
+/*!
+ Bootstrap integration for DataTables' AutoFill
+ ©2015 SpryMedia Ltd - datatables.net/license
+*/
+
+/*!
+ Bootstrap integration for DataTables' Buttons
+ ©2016 SpryMedia Ltd - datatables.net/license
+*/
+
+/*!
+ Buttons for DataTables 1.6.5
+ ©2016-2020 SpryMedia Ltd - datatables.net/license
+*/
+
+/*!
+ ColReorder 1.5.3
+ ©2010-2020 SpryMedia Ltd - datatables.net/license
+*/
+
+/*!
+ FixedColumns 3.3.2
+ ©2010-2020 SpryMedia Ltd - datatables.net/license
+*/
+
+/*!
+ FixedHeader 3.1.7
+ ©2009-2020 SpryMedia Ltd - datatables.net/license
+*/
+
+/*!
+ KeyTable 2.5.3
+ ©2009-2020 SpryMedia Ltd - datatables.net/license
+*/
+
+/*!
+ Responsive 2.2.7
+ 2014-2021 SpryMedia Ltd - datatables.net/license
+*/
+
+/*!
+ RowGroup 1.1.2
+ ©2017-2020 SpryMedia Ltd - datatables.net/license
+*/
+
+/*!
+ RowReorder 1.2.7
+ 2015-2020 SpryMedia Ltd - datatables.net/license
+*/
+
+/*!
+ Scroller 2.0.3
+ ©2011-2020 SpryMedia Ltd - datatables.net/license
+*/
+
+/*!
+ Select for DataTables 1.3.1
+ 2015-2019 SpryMedia Ltd - datatables.net/license/mit
+*/
+
+/*! DataTables 1.10.23
+ * ©2008-2020 SpryMedia Ltd - datatables.net/license
+ */
+
+/*! DataTables Bootstrap 4 integration
+ * ©2011-2017 SpryMedia Ltd - datatables.net/license
+ */
