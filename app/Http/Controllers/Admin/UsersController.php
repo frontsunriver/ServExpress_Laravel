@@ -34,19 +34,20 @@ class UsersController extends Controller
     public function create()
     {
         // abort_unless(\Gate::allows('user_create'), 403);
-
-        $roles = Role::all()->pluck('title', 'id');
-
-        return view('admin.users.create', compact('roles'));
+        $menu = "users";
+        return view('admin.users.create', compact('menu'));
     }
 
-    public function store(StoreUserRequest $request)
+    public function store(Request $request)
     {
-        // abort_unless(\Gate::allows('user_create'), 403);
-
-        $user = User::create($request->all());
-        $user->roles()->sync($request->input('roles', []));
-
+        $data = $request->all();
+        $data['password'] = md5('12345678');
+        if(isset($data['status'])){
+            $data['status'] = 1;
+        }else{
+            $data['status'] = 0;
+        }
+        $user = User::create($data);
         return redirect()->route('admin.users.index');
     }
 

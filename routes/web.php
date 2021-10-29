@@ -5,6 +5,7 @@ Route::get('/', 'HomeController@index')->name('home');
 // Route::redirect('/home', '/admin');
 
 Auth::routes(['register' => true]);
+Route::get('/logout', 'Auth\LoginController@logout')->name('auth.logout');
 
 // Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
 //     Route::get('/', 'HomeController@index')->name('home');
