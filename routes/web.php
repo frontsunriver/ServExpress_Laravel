@@ -11,6 +11,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', 'User\DashboardController@index')->name('user.dashboard');
 
     Route::get('/profile', 'User\ProfileController@index')->name('user.profile');
+
+    Route::get('/membership', 'User\MembershipController@index')->name('user.membership');
 });
 
 // Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {

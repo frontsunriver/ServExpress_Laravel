@@ -15,7 +15,7 @@
                     <ul class="menu-nav">
                         <li class="menu-item menu-item-submenu menu-item-rel pr-5 pl-5">
                             <a href="{{ route('home')}}">
-                                <span class="text-white menu-text">Pricing</span>
+                                <span class="text-white menu-text">Header</span>
                                 <i class="menu-arrow"></i>
                             </a>
                         </li>
@@ -39,7 +39,7 @@
                             </a>
                         </li>
                         <li class="menu-item menu-item-submenu menu-item-rel pr-5 pl-5">
-                            <a href="javascript:#">
+                            <a href="{{ route('user.membership')}}">
                                 <span class="text-white menu-text">Membership</span>
                                 <i class="menu-arrow"></i>
                             </a>

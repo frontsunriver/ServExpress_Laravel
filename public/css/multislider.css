@@ -1,0 +1,74 @@
+
+#blogSlider {
+  position: relative;
+}
+#blogSlider .MS-content {
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 5%;
+}
+#blogSlider .MS-content .item {
+ 
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+  width: 25%;
+  margin:5px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(204,204,204,1);
+-moz-box-shadow: 0px 0px 5px 0px rgba(204,204,204,1);
+box-shadow: 0px 0px 5px 0px rgba(204,204,204,1);
+}
+@media (max-width: 991px) {
+  #blogSlider .MS-content .item {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  #blogSlider .MS-content .item {
+    width: 100%;
+  }
+}
+
+
+
+#blogSlider .MS-controls button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  font-size: 50px;
+  top: 95px;
+  color: rgba(0, 0, 0, 0.4);
+  transition: 0.15s linear;
+}
+#blogSlider .MS-controls button:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 992px) {
+  #blogSlider .MS-controls button {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  #blogSlider .MS-controls button {
+    font-size: 20px;
+  }
+}
+#blogSlider .MS-controls .MS-left {
+  left: 0px;
+}
+@media (max-width: 767px) {
+  #blogSlider .MS-controls .MS-left {
+    left: -10px;
+  }
+}
+#blogSlider .MS-controls .MS-right {
+  right: 0px;
+}
+@media (max-width: 767px) {
+  #blogSlider .MS-controls .MS-right {
+    right: -10px;
+  }
+}

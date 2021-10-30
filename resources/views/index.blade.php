@@ -74,7 +74,7 @@
 												</a>
 											</li>
 											<li class="menu-item menu-item-submenu menu-item-rel pr-5 pl-5">
-												<a href="javascript:#">
+												<a href="{{ route('user.membership')}}">
 													<span class="text-white menu-text">Membership</span>
 													<i class="menu-arrow"></i>
 												</a>
@@ -174,6 +174,7 @@
 											</div>
 										@endif
 									</div>
+									@if(Auth::check())
 									<div class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
 										<ul class="navi navi-hover py-4">
 											<li class="navi-item">
@@ -194,7 +195,7 @@
 											</li>
 										</ul>
 									</div>
-							
+									@endif
 								</div>
 							</div>
 						</div>
