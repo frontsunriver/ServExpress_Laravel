@@ -9,6 +9,8 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('auth.logout');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', 'User\DashboardController@index')->name('user.dashboard');
+
+    Route::get('/profile', 'User\ProfileController@index')->name('user.profile');
 });
 
 // Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {

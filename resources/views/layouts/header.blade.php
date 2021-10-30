@@ -123,45 +123,44 @@
                 </div>
                 <!--end::Dropdown-->
             </div>
-            <div class="dropdown">
-                <div class="topbar-item">
+            <div class="dropdown mr-5">
+                <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                     <button type="button" class="btn btn-outline-light mr-5"><span class="text-white">Free Trial</span></button>
                     @if(!Auth::check())
                         <a href="{{ route('login') }}" class="btn btn-light"><span class="text-danger">Log in</span></a>
                     @endif
                     @if(Auth::check())
-                        <div class="btn btn-icon btn-hover-transparent-white d-flex align-items-center btn-lg px-md-2 w-md-auto" data-toggle="dropdown">
+                        <div class="btn btn-hover-transparent-white btn-dropdown mr-1">
                             <span class="text-white opacity-70 font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
                             <span class="text-white opacity-90 font-weight-bolder font-size-base d-none d-md-inline mr-4">{{auth()->user()->name}}</span>
                             <span class="symbol symbol-35">
                                 <span class="symbol-label text-white font-size-h5 font-weight-bold bg-white-o-30">A</span>
                             </span>
-                            <div class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
-                                <ul class="navi navi-hover py-4">
-                                    <li class="navi-item">
-                                        <a href="{{ route('auth.profile') }}" class="navi-link">
-                                            <span class="symbol symbol-20 mr-3 navi-text">
-                                                <i class="fa fas fa-user" style="color:#848282"></i>
-                                            </span>
-                                            <span class="navi-text">Profile</span>
-                                        </a>
-                                    </li>
-                                    <li class="navi-item">
-                                        <a href="{{ route('auth.logout') }}" class="navi-link">
-                                            <span class="symbol symbol-20 mr-3 navi-text">
-                                                <i class="fa fas fa-sign-out-alt" style="color:#848282"></i>
-                                            </span>
-                                            <span class="navi-text">Log out</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
-                        
                     @endif
                 </div>
+                <div class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
+                    <ul class="navi navi-hover py-4">
+                        <li class="navi-item">
+                            <a href="{{ route('user.profile') }}" class="navi-link">
+                                <span class="symbol symbol-20 mr-3">
+                                    <i class="fa fas fa-user" style="color:#848282"></i>
+                                </span>
+                                <span class="navi-text">Profile</span>
+                            </a>
+                        </li>
+                        <li class="navi-item">
+                            <a href="{{ route('auth.logout') }}" class="navi-link">
+                                <span class="symbol symbol-20 mr-3">
+                                    <i class="fa fas fa-sign-out-alt" style="color:#848282"></i>
+                                </span>
+                                <span class="navi-text">Log out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        
             </div>
         </div>
     </div>
-    <!--end::Container-->
 </div>
