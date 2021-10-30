@@ -7,6 +7,10 @@ Route::get('/', 'HomeController@index')->name('home');
 Auth::routes(['register' => true]);
 Route::get('/logout', 'Auth\LoginController@logout')->name('auth.logout');
 
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/dashboard', 'User\DashboardController@index')->name('user.dashboard');
+});
+
 // Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
 //     Route::get('/', 'HomeController@index')->name('home');
 
