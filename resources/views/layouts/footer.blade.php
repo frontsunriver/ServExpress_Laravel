@@ -1,4 +1,4 @@
-<div style="background: #2F3044; padding: 30px; border-bottom: 2px solid #4F4F4F;">
+<div style="background: #2F3044; padding: 30px; border-bottom: 1px solid #4F4F4F;">
     <div class="container">
         <div class="row">
             <div class="col-sm-3">

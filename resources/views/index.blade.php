@@ -13,23 +13,76 @@
 		<link href="{{ asset('plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('plugins/custom/prismjs/prismjs.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/style1.css') }}" />
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/lightslider.css') }}" />
 		<link rel="shortcut icon" href="{{ asset('media/logos/favicon.ico') }}" />
 	</head>
 	<style>
-		.lSPrev {
-			color: #fff;
-		}
 		html {
 			scroll-behavior: smooth;
+		}
+		.thumbnailgallery {
+			width:100%;
+			height: 540px;
+			padding: 60px;
+			overflow:hidden;
+		}
+		.userprofiles a.profile {
+			display:inline-block;
+			float: left;
+		}
+		.userprofiles a:hover {
+			color: #ff6d00;
+		}
+		.userprofiles img {
+			border-radius: 5px;
+			padding: 3px;
+			display:block;
+			border: 1px solid green;
+		}
+		.arrowleft, .arrowright {
+			font-size:30px;
+			cursor:pointer;
+			display:inline-block;
+			padding:20px;
+			width: 30px;
+			height: 30px;
+			margin-top: 205px;
+		}
+		.profile {
+			width: 370px;
+			height: 470px;
+			display: flex !important;
+			align-items: center;
+			justify-content: center;
+			border-radius: 30px;
 		}
 	</style>
 	<body id="kt_body" style="background-color:#fff; background-image: url(media/bg/main.png); background-size:100% 775px !important" class="quick-panel-right demo-panel-right offcanvas-right header-fixed subheader-enabled page-loading">
 		<div id="kt_header_mobile" class="header-mobile">
+			<!--begin::Logo-->
 			<a href="index.html">
 				Logo
 			</a>
+			<!--end::Logo-->
+			<!--begin::Toolbar-->
+			<div class="d-flex align-items-center">
+				<button class="btn p-0 burger-icon burger-icon-left ml-4" id="kt_header_mobile_toggle">
+					<span></span>
+				</button>
+				<button class="btn btn-icon btn-hover-transparent-white p-0 ml-3" id="kt_header_mobile_topbar_toggle">
+					<span class="svg-icon svg-icon-xl">
+						<!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+							<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<polygon points="0 0 24 0 24 24 0 24" />
+								<path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+								<path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+							</g>
+						</svg>
+						<!--end::Svg Icon-->
+					</span>
+				</button>
+			</div>
+			<!--end::Toolbar-->
 		</div>
 		<div class="d-flex flex-column flex-root">
 			<div class="d-flex flex-row flex-column-fluid page">
@@ -80,7 +133,7 @@
 												</a>
 											</li>
 											<li class="menu-item menu-item-submenu menu-item-rel pr-5 pl-5">
-												<a href="javascript:#">
+												<a href="{{ route ('user.campaign') }}">
 													<span class="text-white menu-text">Campagin</span>
 													<i class="menu-arrow"></i>
 												</a>
@@ -91,19 +144,14 @@
 								</div>
 							</div>
 							<div class="topbar">
-								<div class="dropdown mr-5">
-									<!--begin::Toggle-->
+								<!-- <div class="dropdown mr-5">
 									<div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
 										<div class="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1">
 											<img class="h-20px w-20px rounded-sm" src="{{ asset('media/svg/flags/226-united-states.svg') }}" alt="" />
 										</div>
 									</div>
-									<!--end::Toggle-->
-									<!--begin::Dropdown-->
 									<div class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
-										<!--begin::Nav-->
 										<ul class="navi navi-hover py-4">
-											<!--begin::Item-->
 											<li class="navi-item">
 												<a href="#" class="navi-link">
 													<span class="symbol symbol-20 mr-3">
@@ -112,8 +160,6 @@
 													<span class="navi-text">English</span>
 												</a>
 											</li>
-											<!--end::Item-->
-											<!--begin::Item-->
 											<li class="navi-item active">
 												<a href="#" class="navi-link">
 													<span class="symbol symbol-20 mr-3">
@@ -122,8 +168,6 @@
 													<span class="navi-text">Spanish</span>
 												</a>
 											</li>
-											<!--end::Item-->
-											<!--begin::Item-->
 											<li class="navi-item">
 												<a href="#" class="navi-link">
 													<span class="symbol symbol-20 mr-3">
@@ -132,8 +176,6 @@
 													<span class="navi-text">German</span>
 												</a>
 											</li>
-											<!--end::Item-->
-											<!--begin::Item-->
 											<li class="navi-item">
 												<a href="#" class="navi-link">
 													<span class="symbol symbol-20 mr-3">
@@ -142,8 +184,6 @@
 													<span class="navi-text">Japanese</span>
 												</a>
 											</li>
-											<!--end::Item-->
-											<!--begin::Item-->
 											<li class="navi-item">
 												<a href="#" class="navi-link">
 													<span class="symbol symbol-20 mr-3">
@@ -152,18 +192,17 @@
 													<span class="navi-text">French</span>
 												</a>
 											</li>
-											<!--end::Item-->
 										</ul>
-										<!--end::Nav-->
 									</div>
-									<!--end::Dropdown-->
-								</div>
+								</div> -->
 								<div class="dropdown mr-5">
-									<div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
-										<button type="button" class="btn btn-outline-light mr-5"><span class="text-white">Free Trial</span></button>
+									<div class="topbar-item">
+										<a type="button" class="btn btn-outline-light mr-5"><span class="text-white">Free Trial</span></a>
 										@if(!Auth::check())
 											<a href="{{ route('login') }}" class="btn btn-light"><span class="text-danger">Log in</span></a>
 										@endif
+									</div>
+									<div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
 										@if(Auth::check())
 											<div class="btn btn-hover-transparent-white btn-dropdown mr-1">
 												<span class="text-white opacity-70 font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
@@ -203,7 +242,7 @@
 					<div class="container mt-30">
 						<div class="row justify-content-between">
 							<div class="col-sm-6">
-								<h2 class="text-white font-weight-bold" style="font-size: 45px;">Increase Website ranking_</h2>
+								<h2 class="text-white font-weight-bold" style="font-size: 45px;">Increase <span class="typewrite text-white" data-period="2000" data-type='[ "Website Ranking", "Our Ranking", "Google Search"]'><span class="wrap"></span></span></h2>
 								<h2 class="text-white font-weight-bold" style="font-size: 45px;">and SERP CTR with</h2>
 								<h2 class="text-white font-weight-bold" style="font-size: 45px;">Real organic clicks</h2>
 								<div class="mt-5">
@@ -211,7 +250,6 @@
 									<p class="text-white font-size-h4" style="line-height: 20px;">Select your most important keywords</p>
 									<p class="text-white font-size-h4" style="line-height: 20px;">and have them rank higher. Much higher.</p>
 								</div>
-								
 							</div>
 							<div class="col-sm-4">
 								<img src="{{asset('media/bg/1.png') }}" alt="" style="width:400px; height: 365px;">
@@ -266,7 +304,7 @@
 								<div class="col-sm-4">
 									<div class="d-flex justify-content-start flex-column flex-md-row font-size-lg">
 										<div>
-											<i class="text-white fab fa-critical-role" style="font-size: 50px;"></i>
+											<i class="text-white la la-sliders-h" style="font-size: 50px;"></i>
 										</div>
 										<div class="ml-10">
 											<h1 class="text-white flex-center font-size-h2">Customizable Campaign</h1>
@@ -277,7 +315,7 @@
 								<div class="col-sm-4">
 									<div class="d-flex justify-content-start flex-column flex-md-row font-size-lg">
 										<div>
-											<i class="text-white fab fa-critical-role" style="font-size: 50px;"></i>
+											<i class="text-white fab fas fa-globe" style="font-size: 50px;"></i>
 										</div>
 										<div class="ml-10">
 											<h1 class="text-white flex-center font-size-h2">Geotargeted From Anywhere</h1>
@@ -288,7 +326,7 @@
 								<div class="col-sm-4">
 									<div class="d-flex justify-content-start flex-column flex-md-row font-size-lg">
 										<div>
-											<i class="text-white fab fa-critical-role" style="font-size: 50px;"></i>
+											<i class="text-white fab fas fa-tag" style="font-size: 50px;"></i>
 										</div>
 										<div class="ml-10">
 											<h1 class="text-white flex-center font-size-h2">Affordable Traffic</h1>
@@ -313,7 +351,7 @@
 								<div class="col-sm-4">
 									<div class="d-flex justify-content-start flex-column flex-md-row font-size-lg">
 										<div>
-											<i class="text-white fab fa-critical-role" style="font-size: 50px;"></i>
+											<i class="text-white flaticon-network" style="font-size: 50px;"></i>
 										</div>
 										<div class="ml-10">
 											<h1 class="text-white flex-center font-size-h2">Unlimited Capacity</h1>
@@ -324,7 +362,7 @@
 								<div class="col-sm-4">
 									<div class="d-flex justify-content-start flex-column flex-md-row font-size-lg">
 										<div>
-											<i class="text-white fab fa-critical-role" style="font-size: 50px;"></i>
+											<i class="text-white socicon-wechat" style="font-size: 50px;"></i>
 										</div>
 										<div class="ml-10">
 											<h1 class="text-white flex-center font-size-h2">Support Fanatics</h1>
@@ -399,7 +437,7 @@
 											<p class="text-white">These numbers are merely estimates based on average click-through rates for different positions on Google. They are provided for planning purposes only and assume that the SerpClix service is complemented with a normal on-site and off-site search engine optimization approach. There are no guarantees in SEO, and you certainly won't find any here.</p>
 										</div>
 										<div class="col-sm-2s mt-4">
-											<button type="button" class="btn btn-outline-light">Start Free Trial</button>
+											<button type="button" class="btn btn-outline-light text-white">Start Free Trial</button>
 										</div>
 									</div>
 								</div>
@@ -407,12 +445,13 @@
 						</div>
 					</div>
 					<div style="background: #2F3044;" id="pricing">
-						<div class="container justify-content-center">
-							<h1 class="text-white text-center mt-10 display-2">Pricing Plan</h1>
-							<section class="slider" style="padding: 10px 30px; height: 70vh;">
-								<ul id="autoWidth" class="cs-hidden" style="width:1226px !important;">
-									<li class="item-a rounded" style="padding: 65px 0px;">
-										<div class="my-md-n15 rounded shadow-sm" style="background: #434456; padding-left: 25px !important; padding-right: 25px !important;">
+						<h1 class="text-white text-center mt-20 display-2">Pricing Plan</h1>
+						<div style="display:flex; padding: 50px 105px 80px 105px; justify-content: center; border-bottom: 1px solid #e2e2e2;">
+							<span class="arrowleft" id="prev"><i class="fa fas fa-angle-double-left font-size-h1"></i></span>
+							<div class="thumbnailgallery">
+								<div class="userprofiles clearfix d-flex">
+									<div class="profile">
+										<div class="my-md-n15 shadow-sm" style="border-radius: 35px; background: #434456; padding-left: 25px !important; padding-right: 25px !important;">
 											<div class="pt-10 pb-10">
 												<h4 class="text-white mb-5 text-center">100% AI Clicker</h4>
 												<h5 class="font-size-sm text-white mb-7">How many searches/day do you need?</h5>
@@ -436,9 +475,9 @@
 												</div>
 											</div>
 										</div>
-									</li>
-									<li class="item-a rounded" style="padding: 65px 0px;">
-										<div class="my-md-n15 rounded shadow-sm" style="background: #434456; padding-left: 25px !important; padding-right: 25px !important;">
+									</div>
+									<div class="profile">
+										<div class="my-md-n15 shadow-sm" style="border-radius: 35px; background: #434456; padding-left: 25px !important; padding-right: 25px !important;">
 											<div class="pt-10 pb-10">
 												<h4 class="text-white mb-5 text-center">95% AI + 5% Human Clicker</h4>
 												<h5 class="font-size-sm text-white mb-7">How many searches/day do you need?</h5>
@@ -462,9 +501,9 @@
 												</div>
 											</div>
 										</div>
-									</li>
-									<li class="item-a rounded" style="padding: 65px 0px;">
-										<div class="my-md-n15 rounded shadow-sm" style="background: #434456; padding-left: 25px !important; padding-right: 25px !important;">
+									</div>
+									<div class="profile">
+										<div class="my-md-n15 shadow-sm" style="border-radius: 35px; background: #434456; padding-left: 25px !important; padding-right: 25px !important;">
 											<div class="pt-10 pb-10">
 												<h4 class="text-white mb-5 text-center">100% Human Clicker</h4>
 												<h5 class="font-size-sm text-white mb-7">How many searches/day do you need?</h5>
@@ -488,9 +527,9 @@
 												</div>
 											</div>
 										</div>
-									</li>
-									<li class="item-a rounded" style="padding: 65px 0px;">
-										<div class="my-md-n15 rounded shadow-sm" style="background: #434456; padding-left: 25px !important; padding-right: 25px !important;">
+									</div>
+									<div class="profile">
+										<div class="my-md-n15 shadow-sm" style="border-radius: 35px; background: #434456; padding-left: 25px !important; padding-right: 25px !important;">
 											<div class="pt-10 pb-10">
 												<h4 class="text-white mb-5 text-center">95% AI + 5% Human Clicker</h4>
 												<h5 class="font-size-sm text-white mb-7">How many searches/day do you need?</h5>
@@ -514,9 +553,10 @@
 												</div>
 											</div>
 										</div>
-									</li>
-								</ul>
-							</section>
+									</div>
+								</div>
+							</div>
+							<span class="arrowright" id="next"><i class="fa fas fa-angle-double-right font-size-h1"></i></span>
 						</div>
 					</div>
 					<div class="container">
@@ -640,17 +680,76 @@
 		<script src="{{ asset ('js/scripts.bundle.js') }}"></script>
 		<script src="{{ asset ('plugins/custom/fullcalendar/fullcalendar.bundle.js') }}"></script>
 		<script src="{{ asset ('js/pages/widgets.js') }}"></script>
-		<script src="{{ asset ('js/lightslider.js') }}" ></script>
 		<script>
 			$(document).ready(function() {
-				$('#autoWidth').lightSlider({
-					autoWidth:true,
-					loop:true,
-					onSliderLoad: function() {
-						$('#autoWidth').removeClass('cS-hidden');
-					} 
-				});  
-			
+				var TxtType = function(el, toRotate, period) {
+					this.toRotate = toRotate;
+					this.el = el;
+					this.loopNum = 0;
+					this.period = parseInt(period, 10) || 2000;
+					this.txt = '';
+					this.tick();
+					this.isDeleting = false;
+				};
+
+				TxtType.prototype.tick = function() {
+					var i = this.loopNum % this.toRotate.length;
+					var fullTxt = this.toRotate[i];
+
+					if (this.isDeleting) {
+					this.txt = fullTxt.substring(0, this.txt.length - 1);
+					} else {
+					this.txt = fullTxt.substring(0, this.txt.length + 1);
+					}
+
+					this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+					var that = this;
+					var delta = 200 - Math.random() * 100;
+
+					if (this.isDeleting) { delta /= 2; }
+
+					if (!this.isDeleting && this.txt === fullTxt) {
+					delta = this.period;
+					this.isDeleting = true;
+					} else if (this.isDeleting && this.txt === '') {
+					this.isDeleting = false;
+					this.loopNum++;
+					delta = 500;
+					}
+
+					setTimeout(function() {
+					that.tick();
+					}, delta);
+				};
+
+				window.onload = function() {
+					var elements = document.getElementsByClassName('typewrite');
+					for (var i=0; i<elements.length; i++) {
+						var toRotate = elements[i].getAttribute('data-type');
+						var period = elements[i].getAttribute('data-period');
+						if (toRotate) {
+						new TxtType(elements[i], JSON.parse(toRotate), period);
+						}
+					}
+					// INJECT CSS
+					var css = document.createElement("style");
+					css.type = "text/css";
+					css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+					document.body.appendChild(css);
+				};
+			})
+			var profileWidht = $(".profile").width();
+			$('#prev').on('click', function () {
+				var last = $('.profile').last().css({opacity: '0', width: '0px'});
+				last.prependTo('.userprofiles');
+				last.animate({opacity: '1', width: (profileWidht + 1 + 'px')});
+			});
+			$('#next').on('click', function () {
+				var first = $('.profile').first();
+				first.animate({opacity: '0', width: '0px'}, function() {
+					first.appendTo('.userprofiles').css({opacity: '1', width: profileWidht + 'px'});
+				});
 			});
 		</script>
 	</body>

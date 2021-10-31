@@ -1,7 +1,7 @@
 <?php
 
 Route::get('/', 'HomeController@index')->name('home');
-
+Route::get('/home', 'HomeController@index')->name('home');
 // Route::redirect('/home', '/admin');
 
 Auth::routes(['register' => true]);
@@ -13,6 +13,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/profile', 'User\ProfileController@index')->name('user.profile');
 
     Route::get('/membership', 'User\MembershipController@index')->name('user.membership');
+
+    Route::get('/campaign', 'User\CampaignController@index')->name('user.campaign');
+    Route::get('/campaign/detail', 'User\CampaignController@detail')->name('user.campaign.detail');
+    Route::get('/campaign/create', 'User\CampaignController@create')->name('user.campaign.create');
 });
 
 // Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {

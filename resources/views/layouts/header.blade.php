@@ -15,7 +15,7 @@
                     <ul class="menu-nav">
                         <li class="menu-item menu-item-submenu menu-item-rel pr-5 pl-5">
                             <a href="{{ route('home')}}">
-                                <span class="text-white menu-text">Header</span>
+                                <span class="text-white menu-text">Home</span>
                                 <i class="menu-arrow"></i>
                             </a>
                         </li>
@@ -45,7 +45,7 @@
                             </a>
                         </li>
                         <li class="menu-item menu-item-submenu menu-item-rel pr-5 pl-5">
-                            <a href="javascript:#">
+                            <a href="{{ route ('user.campaign') }}">
                                 <span class="text-white menu-text">Campagin</span>
                                 <i class="menu-arrow"></i>
                             </a>
@@ -56,19 +56,14 @@
             </div>
         </div>
         <div class="topbar">
-            <div class="dropdown mr-5">
-                <!--begin::Toggle-->
+            <!-- <div class="dropdown mr-5">
                 <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                     <div class="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1">
                         <img class="h-20px w-20px rounded-sm" src="{{ asset('media/svg/flags/226-united-states.svg') }}" alt="" />
                     </div>
                 </div>
-                <!--end::Toggle-->
-                <!--begin::Dropdown-->
                 <div class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
-                    <!--begin::Nav-->
                     <ul class="navi navi-hover py-4">
-                        <!--begin::Item-->
                         <li class="navi-item">
                             <a href="#" class="navi-link">
                                 <span class="symbol symbol-20 mr-3">
@@ -77,8 +72,6 @@
                                 <span class="navi-text">English</span>
                             </a>
                         </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
                         <li class="navi-item active">
                             <a href="#" class="navi-link">
                                 <span class="symbol symbol-20 mr-3">
@@ -87,8 +80,6 @@
                                 <span class="navi-text">Spanish</span>
                             </a>
                         </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
                         <li class="navi-item">
                             <a href="#" class="navi-link">
                                 <span class="symbol symbol-20 mr-3">
@@ -97,8 +88,6 @@
                                 <span class="navi-text">German</span>
                             </a>
                         </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
                         <li class="navi-item">
                             <a href="#" class="navi-link">
                                 <span class="symbol symbol-20 mr-3">
@@ -107,8 +96,6 @@
                                 <span class="navi-text">Japanese</span>
                             </a>
                         </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
                         <li class="navi-item">
                             <a href="#" class="navi-link">
                                 <span class="symbol symbol-20 mr-3">
@@ -117,18 +104,17 @@
                                 <span class="navi-text">French</span>
                             </a>
                         </li>
-                        <!--end::Item-->
                     </ul>
-                    <!--end::Nav-->
                 </div>
-                <!--end::Dropdown-->
-            </div>
+            </div> -->
             <div class="dropdown mr-5">
-                <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
-                    <button type="button" class="btn btn-outline-light mr-5"><span class="text-white">Free Trial</span></button>
+                <div class="topbar-item">
+                    <a type="button" class="btn btn-outline-light mr-5"><span class="text-white">Free Trial</span></a>
                     @if(!Auth::check())
                         <a href="{{ route('login') }}" class="btn btn-light"><span class="text-danger">Log in</span></a>
                     @endif
+                </div>
+                <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                     @if(Auth::check())
                         <div class="btn btn-hover-transparent-white btn-dropdown mr-1">
                             <span class="text-white opacity-70 font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
@@ -139,6 +125,7 @@
                         </div>
                     @endif
                 </div>
+                @if(Auth::check())
                 <div class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
                     <ul class="navi navi-hover py-4">
                         <li class="navi-item">
@@ -159,6 +146,7 @@
                         </li>
                     </ul>
                 </div>
+                @endif
         
             </div>
         </div>
