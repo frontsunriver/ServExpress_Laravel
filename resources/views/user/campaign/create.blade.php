@@ -41,7 +41,6 @@
                                                     <h1 class="font-size-h3">Google SEO</h1>        
                                                     <h2 class="font-size-h5">Organic Traffic from Google search</h2>
                                                 </div>      
-                                                
                                             </div>
                                         </div>
                                     </a>

@@ -11,6 +11,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', 'User\DashboardController@index')->name('user.dashboard');
 
     Route::get('/profile', 'User\ProfileController@index')->name('user.profile');
+    Route::post('/profile/updatepassword', 'User\ProfileController@updatepassword')->name('user.profile.updatepassword');
 
     Route::get('/membership', 'User\MembershipController@index')->name('user.membership');
 

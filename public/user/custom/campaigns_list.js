@@ -112,14 +112,18 @@ var KTDatatableRemoteAjaxDemo = function() {
                 },
             }, ],
 
+            rows: {
+                CompanyAgent: 'CompanyAgent'
+            }
+
         });
 
         $("#kt_datatable").on('click', 'tbody tr', function() {
             // var row = datatable.row(this);
             // console.log(row);
-            // var rowData = datatable.row(this).data();
-            // console.log(rowData);
-            document.location.href = "/campaign/detail";
+            var rowData = datatable.row(this).data();
+            console.log(rowData);
+            // document.location.href = "/campaign/detail";
         });
     };
 

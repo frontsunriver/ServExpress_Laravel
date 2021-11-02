@@ -161,9 +161,13 @@
                                 </form>
                             </div>
                             <div class="tab-pane fade" id="kt_tab_pane_3_2" role="tabpanel">
-                                <form class="form">
+                                <form class="form" method="POST" action="{{route('user.profile.updatepassword')}}">
                                     @csrf
                                     <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="exampleSelects">Current Password</label>
+                                            <input type="password" class="form-control"  name="current_password" placeholder="New Password" />
+                                        </div>
                                         <div class="form-group">
                                             <label for="exampleSelects">New Password</label>
                                             <input type="password" class="form-control"  name="password" placeholder="New Password" />
@@ -173,7 +177,7 @@
                                             <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" />
                                         </div>
                                         <div class="form-group" >
-                                            <button type="button" class="btn btn-primary">Update</button>
+                                            <button type="submit" class="btn btn-primary">Update</button>
                                         </div>
                                     </div>
                                 </form>
@@ -185,4 +189,11 @@
         </div>
     </div>
 </div>
+@section('scripts')
+@parent
+<!-- <script src="{{ asset('js/pages/features/miscellaneous/toastr.js') }} "></script> -->
+<script>
+    
+</script>
+@endsection
 @endsection

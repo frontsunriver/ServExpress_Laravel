@@ -17,7 +17,7 @@
 		@yield('styles')
 	</head>
 
-	<body id="kt_body" style="background-image: url(/media/bg/header_back.png)" class="quick-panel-right demo-panel-right offcanvas-right header-fixed subheader-enabled page-loading">
+	<body id="kt_body" style="background-image: url({{ asset ('media/bg/header_back.png') }})" class="quick-panel-right demo-panel-right offcanvas-right header-fixed subheader-enabled page-loading">
 		<div id="kt_header_mobile" class="header-mobile">
 			<a href="index.html">
 				<img alt="Logo" src="assets/media/logos/logo-letter-1.png" class="logo-default max-h-30px" />

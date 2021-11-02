@@ -5,6 +5,8 @@ namespace App\Http\Controllers\User;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Rules\MatchOldPassword;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -34,9 +36,16 @@ class ProfileController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function updatepassword(Request $request)
     {
-        //
+        $request->validate([
+            'current_password' => ['required', new MatchOldPassword],
+            'password' => ['required'],
+            'confirm_password' => ['same:password'],
+        ]);
+   
+        User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
+        return redirect()->route('user.profile');
     }
 
     /**

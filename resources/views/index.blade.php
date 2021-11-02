@@ -56,7 +56,7 @@
 			border-radius: 30px;
 		}
 	</style>
-	<body id="kt_body" style="background-color:#fff; background-image: url(media/bg/main.png); background-size:100% 775px !important" class="quick-panel-right demo-panel-right offcanvas-right header-fixed subheader-enabled page-loading">
+	<body id="kt_body" style="background-color:#fff; background-image: url({{ asset ('media/bg/main.png') }}); background-size:100% 775px !important" class="quick-panel-right demo-panel-right offcanvas-right header-fixed subheader-enabled page-loading">
 		<div id="kt_header_mobile" class="header-mobile">
 			<!--begin::Logo-->
 			<a href="index.html">
