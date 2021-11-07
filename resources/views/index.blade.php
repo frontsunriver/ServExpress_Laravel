@@ -21,7 +21,7 @@
 		}
 		.thumbnailgallery {
 			width:100%;
-			height: 540px;
+			height: 580px;
 			padding: 60px;
 			overflow:hidden;
 		}
@@ -48,13 +48,45 @@
 			margin-top: 205px;
 		}
 		.profile {
-			width: 370px;
+			margin-right: 20px;
 			height: 470px;
 			display: flex !important;
 			align-items: center;
 			justify-content: center;
 			border-radius: 30px;
 		}
+		@media (max-width: 980px) {
+			#section5 {
+				padding: 0px !important;
+			}
+		}
+
+		@media (max-width: 900px) {
+			#section6 {
+				padding: 50px 20px 80px 0px !important;
+			}
+		}
+
+		@media (max-width: 575px) {
+			#start_free_trial {
+				justify-content: center !important;
+			}
+		}
+
+		@media (max-width: 767px) {
+			.font_icon {
+				text-align: center;
+			}
+		}
+
+		@media (max-width: 575px) {
+			.choose_plan {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 40px;
+			}
+		}
+		
 	</style>
 	<body id="kt_body" style="background-color:#fff; background-image: url({{ asset ('media/bg/main.png') }}); background-size:100% 775px !important" class="quick-panel-right demo-panel-right offcanvas-right header-fixed subheader-enabled page-loading">
 		<div id="kt_header_mobile" class="header-mobile">
@@ -144,57 +176,6 @@
 								</div>
 							</div>
 							<div class="topbar">
-								<!-- <div class="dropdown mr-5">
-									<div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
-										<div class="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1">
-											<img class="h-20px w-20px rounded-sm" src="{{ asset('media/svg/flags/226-united-states.svg') }}" alt="" />
-										</div>
-									</div>
-									<div class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
-										<ul class="navi navi-hover py-4">
-											<li class="navi-item">
-												<a href="#" class="navi-link">
-													<span class="symbol symbol-20 mr-3">
-														<img src="{{ asset('media/svg/flags/226-united-states.svg') }}" alt="" />
-													</span>
-													<span class="navi-text">English</span>
-												</a>
-											</li>
-											<li class="navi-item active">
-												<a href="#" class="navi-link">
-													<span class="symbol symbol-20 mr-3">
-														<img src="{{ asset('media/svg/flags/128-spain.svg') }}" alt="" />
-													</span>
-													<span class="navi-text">Spanish</span>
-												</a>
-											</li>
-											<li class="navi-item">
-												<a href="#" class="navi-link">
-													<span class="symbol symbol-20 mr-3">
-														<img src="{{ asset('media/svg/flags/162-germany.svg') }}" alt="" />
-													</span>
-													<span class="navi-text">German</span>
-												</a>
-											</li>
-											<li class="navi-item">
-												<a href="#" class="navi-link">
-													<span class="symbol symbol-20 mr-3">
-														<img src="{{ asset('media/svg/flags/063-japan.svg') }}" alt="" />
-													</span>
-													<span class="navi-text">Japanese</span>
-												</a>
-											</li>
-											<li class="navi-item">
-												<a href="#" class="navi-link">
-													<span class="symbol symbol-20 mr-3">
-														<img src="{{ asset('media/svg/flags/195-france.svg') }}" alt="" />
-													</span>
-													<span class="navi-text">French</span>
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div> -->
 								<div class="dropdown mr-5">
 									<div class="topbar-item">
 										<a type="button" class="btn btn-outline-light mr-5"><span class="text-white">Free Trial</span></a>
@@ -239,7 +220,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="container mt-30">
+					<div class="container mt-30" id="section1">
 						<div class="row justify-content-between">
 							<div class="col-sm-6">
 								<h2 class="text-white font-weight-bold" style="font-size: 45px;">Increase <span class="typewrite text-white" data-period="2000" data-type='[ "Website Ranking", "Our Ranking", "Google Search"]'><span class="wrap"></span></span></h2>
@@ -251,8 +232,8 @@
 									<p class="text-white font-size-h4" style="line-height: 20px;">and have them rank higher. Much higher.</p>
 								</div>
 							</div>
-							<div class="col-sm-4">
-								<img src="{{asset('media/bg/1.png') }}" alt="" style="width:400px; height: 365px;">
+							<div class="col-sm-5">
+								<img src="{{asset('media/bg/1.png') }}" alt="" style="height: 365px; width:100%">
 							</div>
 
 						</div>
@@ -279,8 +260,8 @@
 									<p class="font-size-h4 font-weight-normal">The CTR is the SEO key factor that shows Google positif user signals. Try the largest residential network for CTR manipulation.</p>
 								</div>
 							</div>
-							<div class="col-sm-4">
-								<img src="{{asset('media/bg/2.png') }}" alt="" style="width:400px; height: 300px;">
+							<div class="col-sm-5">
+								<img src="{{asset('media/bg/2.png') }}" alt="" style="width:100%; height: 300px;">
 							</div>
 						</div>
 						<div class="row mt-30 justify-content-between">
@@ -296,14 +277,14 @@
 						</div>
 
 					</div>
-					<div class="mt-20" style="background-color:#E95059; padding:50px 0px;">
+					<div class="mt-20" style="background-color:#E95059; padding:50px 0px;" id="section2">
 						<h1 class="text-white flex-center display-3" style="text-align:center;">Wield The Power Of Organic Traffic.</h1>
 						<h1 class="text-white flex-center font-size-h2 mt-10 font-weight-normal" style="text-align:center;">the simplest way to increase your SERP CTR</h1>
 						<div class="container mt-20">
 							<div class="row justify-content-between">
 								<div class="col-sm-4">
 									<div class="d-flex justify-content-start flex-column flex-md-row font-size-lg">
-										<div>
+										<div class="font_icon">
 											<i class="text-white la la-sliders-h" style="font-size: 50px;"></i>
 										</div>
 										<div class="ml-10">
@@ -314,7 +295,7 @@
 								</div>
 								<div class="col-sm-4">
 									<div class="d-flex justify-content-start flex-column flex-md-row font-size-lg">
-										<div>
+										<div class="font_icon">
 											<i class="text-white fab fas fa-globe" style="font-size: 50px;"></i>
 										</div>
 										<div class="ml-10">
@@ -325,7 +306,7 @@
 								</div>
 								<div class="col-sm-4">
 									<div class="d-flex justify-content-start flex-column flex-md-row font-size-lg">
-										<div>
+										<div class="font_icon">
 											<i class="text-white fab fas fa-tag" style="font-size: 50px;"></i>
 										</div>
 										<div class="ml-10">
@@ -339,7 +320,7 @@
 							<div class="row justify-content-between mt-15">
 								<div class="col-sm-4">
 									<div class="d-flex justify-content-start flex-column flex-md-row font-size-lg">
-										<div>
+										<div class="font_icon">
 											<i class="text-white fab fa-critical-role" style="font-size: 50px;"></i>
 										</div>
 										<div class="ml-10">
@@ -350,7 +331,7 @@
 								</div>
 								<div class="col-sm-4">
 									<div class="d-flex justify-content-start flex-column flex-md-row font-size-lg">
-										<div>
+										<div class="font_icon">
 											<i class="text-white flaticon-network" style="font-size: 50px;"></i>
 										</div>
 										<div class="ml-10">
@@ -361,7 +342,7 @@
 								</div>
 								<div class="col-sm-4">
 									<div class="d-flex justify-content-start flex-column flex-md-row font-size-lg">
-										<div>
+										<div class="font_icon">
 											<i class="text-white socicon-wechat" style="font-size: 50px;"></i>
 										</div>
 										<div class="ml-10">
@@ -374,7 +355,7 @@
 						</div>
 						
 					</div>
-					<div class="mt-30">
+					<div class="mt-30" id="section3">
 						<h1 class="flex-center display-3" style="text-align:center;">Why Buy Website Traffic?</h1>
 						<div class="mt-10" style="text-align: center;">
 							<p class="font-size-h4 font-weight-normal" style="line-height:18px;">SerpClix uses real humans to search for your keywords on Google and then click on your listings, driving real</p>
@@ -382,7 +363,7 @@
 							<p class="font-size-h4 font-weight-normal" style="line-height:18px;">(SERP) listing, which can be a very positive SEO ranking signal.</p>
 						</div>
 					</div>
-					<div class="container mt-30">
+					<div class="container mt-30" id="section4">
 						<div class="row justify-content-between">
 							<div class="col-sm-6">
 								<h1 class="display-4">Does CTR Affect Rankings?</h1>
@@ -391,16 +372,16 @@
 									<p class="font-size-h4 font-weight-normal">These were real people, making real clicks. This was the first proof that click-through rate (CTR) was a factor that could heavily move the SERPs.</p>
 								</div>
 
-								<div class="mt-10">
+								<div class="mt-10 choose_plan" >
 								<button type="button" class="btn btn-danger">Choose your plan</button>
 								</div>
 							</div>
-							<div class="col-sm-4">
-								<img src="{{asset('media/bg/5.png') }}" alt="" style="width:400px; height: 300px;">
+							<div class="col-sm-5">
+								<img src="{{asset('media/bg/5.png') }}" alt="" style="width:100%; height: 300px;">
 							</div>
 						</div>
 					</div>
-					<div class="container mt-30 justify-content-center" style="padding: 0px 100px;">
+					<div class="container mt-30 justify-content-center" style="padding: 0px 100px;" id="section5">
 						<div class="card card-custom gutter-b draggable" tabindex="0" style="border-radius: 45px; background: #F4F5F9; box-shadow: 0px 3px 0px 2px #e2e2e2;border-top: 1px solid #e2e2e2;">
 							<div class="card-body">
 								<h1 class="flex-center display-3 mt-15" style="text-align:center;">What Does Google Say About CTR?</h1>
@@ -427,12 +408,10 @@
 								</div>
 								<p class="font-size-h4 font-weight-normal mt-5" style="line-height:18px; text-align:center;">Estimated Clicks Required</p>
 								<p class="font-size-h3 text-danger" style="text-align:center;">77</p>	
-
-								
 							</div>
 							<div class="card-footer" style="background: #e95059; border-bottom-right-radius: 45px; border-bottom-left-radius: 45px;">
 								<div classs="container" style="padding: 0px 60px;">
-									<div class="row justify-content-between">
+									<div class="row justify-content-between" id="start_free_trial">
 										<div class="col-sm-8">
 											<p class="text-white">These numbers are merely estimates based on average click-through rates for different positions on Google. They are provided for planning purposes only and assume that the SerpClix service is complemented with a normal on-site and off-site search engine optimization approach. There are no guarantees in SEO, and you certainly won't find any here.</p>
 										</div>
@@ -446,16 +425,17 @@
 					</div>
 					<div style="background: #2F3044;" id="pricing">
 						<h1 class="text-white text-center mt-20 display-2">Pricing Plan</h1>
-						<div style="display:flex; padding: 50px 105px 80px 105px; justify-content: center; border-bottom: 1px solid #e2e2e2;">
+						<div style="display:flex; padding: 50px 105px 80px 105px; justify-content: center; border-bottom: 1px solid #e2e2e2;" id="section6">
 							<span class="arrowleft" id="prev"><i class="fa fas fa-angle-double-left font-size-h1"></i></span>
 							<div class="thumbnailgallery">
-								<div class="userprofiles clearfix d-flex">
+								<div class="userprofiles clearfix d-flex" style="justify-content:center">
 									<div class="profile">
 										<div class="my-md-n15 shadow-sm" style="border-radius: 35px; background: #434456; padding-left: 25px !important; padding-right: 25px !important;">
 											<div class="pt-10 pb-10">
 												<h4 class="text-white mb-5 text-center">100% AI Clicker</h4>
 												<h5 class="font-size-sm text-white mb-7">How many searches/day do you need?</h5>
-												<input class="form-control mb-7" type="range">
+												<input class="form-control mb-4" type="range">
+												<h5 class="font-size-lg text-white text-center">25 searches/day</h5>
 												<div style="display: flex; item-align: center; justify-content: center;">
 													<span class="px-7 py-3 d-inline-flex flex-center text-center">
 														<span class="pr-2 text-white opacity-70">$</span>
@@ -465,10 +445,9 @@
 												</div>
 												<br>
 												<div class="text-white mb-10 d-flex flex-column">
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>25 searches /day</span></button>
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>12 keywords included</span></button>
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>2 pages visited</span></button>
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>Up to 1mn Session Duration</span></button>
+													<button class="mb-2" style="padding:5px; background-color:#63616F; color:#fff;"><span>12 keywords included</span></button>
+													<button class="mb-2" style="padding:5px; background-color:#63616F; color:#fff;"><span>2 pages visited</span></button>
+													<button class="mb-2" style="padding:5px; background-color:#63616F; color:#fff;"><span>Up to 1mn Session Duration</span></button>
 												</div>
 												<div style="display: flex; align-items: center; justify-content: center;">
 													<button type="button" class="btn btn-danger justify-content-center">Get Started</button>
@@ -481,7 +460,8 @@
 											<div class="pt-10 pb-10">
 												<h4 class="text-white mb-5 text-center">95% AI + 5% Human Clicker</h4>
 												<h5 class="font-size-sm text-white mb-7">How many searches/day do you need?</h5>
-												<input class="form-control mb-7" type="range">
+												<input class="form-control mb-4" type="range">
+												<h5 class="font-size-lg text-white text-center">25 searches/day</h5>
 												<div style="display: flex; item-align: center; justify-content: center;">
 													<span class="px-7 py-3 d-inline-flex flex-center text-center">
 														<span class="pr-2 text-white opacity-70">$</span>
@@ -491,10 +471,9 @@
 												</div>
 												<br>
 												<div class="text-white mb-10 d-flex flex-column">
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>50 searches /day</span></button>
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>25 keywords included</span></button>
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>2 pages visited</span></button>
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>Up to 2mn Session Duration</span></button>
+													<button class="mb-2" style="padding:5px; background-color:#63616F; color:#fff;"><span>25 keywords included</span></button>
+													<button class="mb-2" style="padding:5px; background-color:#63616F; color:#fff;"><span>2 pages visited</span></button>
+													<button class="mb-2" style="padding:5px; background-color:#63616F; color:#fff;"><span>Up to 2mn Session Duration</span></button>
 												</div>
 												<div style="display: flex; align-items: center; justify-content: center;">
 													<button type="button" class="btn btn-danger justify-content-center">Get Started</button>
@@ -507,7 +486,8 @@
 											<div class="pt-10 pb-10">
 												<h4 class="text-white mb-5 text-center">100% Human Clicker</h4>
 												<h5 class="font-size-sm text-white mb-7">How many searches/day do you need?</h5>
-												<input class="form-control mb-7" type="range">
+												<input class="form-control mb-4" type="range">
+												<h5 class="font-size-lg text-white text-center">25 searches/day</h5>
 												<div style="display: flex; item-align: center; justify-content: center;">
 													<span class="px-7 py-3 d-inline-flex flex-center text-center">
 														<span class="pr-2 text-white opacity-70">$</span>
@@ -517,10 +497,9 @@
 												</div>
 												<br>
 												<div class="text-white mb-10 d-flex flex-column">
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>100 searches /day</span></button>
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>50 keywords included</span></button>
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>2 pages visited</span></button>
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>Up to 3mn Session Duration</span></button>
+													<button class="mb-2" style="padding:5px; background-color:#63616F; color:#fff;"><span>50 keywords included</span></button>
+													<button class="mb-2" style="padding:5px; background-color:#63616F; color:#fff;"><span>2 pages visited</span></button>
+													<button class="mb-2" style="padding:5px; background-color:#63616F; color:#fff;"><span>Up to 3mn Session Duration</span></button>
 												</div>
 												<div style="display: flex; align-items: center; justify-content: center;">
 													<button type="button" class="btn btn-danger justify-content-center">Get Started</button>
@@ -533,7 +512,8 @@
 											<div class="pt-10 pb-10">
 												<h4 class="text-white mb-5 text-center">95% AI + 5% Human Clicker</h4>
 												<h5 class="font-size-sm text-white mb-7">How many searches/day do you need?</h5>
-												<input class="form-control mb-7" type="range">
+												<input class="form-control mb-4" type="range">
+												<h5 class="font-size-lg text-white text-center">25 searches/day</h5>
 												<div style="display: flex; item-align: center; justify-content: center;">
 													<span class="px-7 py-3 d-inline-flex flex-center text-center">
 														<span class="pr-2 text-white opacity-70">$</span>
@@ -541,12 +521,12 @@
 														<span class="text-white opacity-70">&nbsp;&nbsp;mo</span>
 													</span>
 												</div>
+												
 												<br>
 												<div class="text-white mb-10 d-flex flex-column">
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>150 searches /day</span></button>
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>75 keywords included</span></button>
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>3 pages visited</span></button>
-													<button style="border-radius: 50px;padding:5px; background-color:#63616F; color:#fff;"><span>Up to 3mn Session Duration</span></button>
+													<button class="mb-2" style="padding:5px; background-color:#63616F; color:#fff;"><span>75 keywords included</span></button>
+													<button class="mb-2" style="padding:5px; background-color:#63616F; color:#fff;"><span>3 pages visited</span></button>
+													<button class="mb-2" style="padding:5px; background-color:#63616F; color:#fff;"><span>Up to 3mn Session Duration</span></button>
 												</div>
 												<div style="display: flex; align-items: center; justify-content: center;">
 													<button type="button" class="btn btn-danger justify-content-center">Get Started</button>
@@ -559,7 +539,7 @@
 							<span class="arrowright" id="next"><i class="fa fas fa-angle-double-right font-size-h1"></i></span>
 						</div>
 					</div>
-					<div class="container">
+					<div class="container" id="section7">
 						<h1 class="text-center display-3 mt-20">Frequently Asked Questions.</h1>
 						<div class="accordion accordion-toggle-arrow" id="accordionExample1">
 							<div class="accordion accordion-solid accordion-panel accordion-svg-toggle" id="accordionExample8">
@@ -567,17 +547,6 @@
 									<div class="card-header" id="headingOne8">
 										<div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne8" aria-expanded="false" style="background: #ECECEC;">
 											<div class="card-label">Does boosting CTR truly work for SEO?</div>
-											<span class="svg-icon">
-												<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-right.svg-->
-												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<polygon points="0 0 24 0 24 24 0 24"></polygon>
-														<path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero"></path>
-														<path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)"></path>
-													</g>
-												</svg>
-												<!--end::Svg Icon-->
-											</span>
 										</div>
 									</div>
 									<div id="collapseOne8" class="collapse" data-parent="#accordionExample8" style="">
@@ -588,17 +557,6 @@
 									<div class="card-header" id="headingTwo8">
 										<div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo8" style="background: #ECECEC;">
 											<div class="card-label">You can guarantee results, then?</div>
-											<span class="svg-icon">
-												<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-right.svg-->
-												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<polygon points="0 0 24 0 24 24 0 24"></polygon>
-														<path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero"></path>
-														<path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)"></path>
-													</g>
-												</svg>
-												<!--end::Svg Icon-->
-											</span>
 										</div>
 									</div>
 									<div id="collapseTwo8" class="collapse" data-parent="#accordionExample8">
@@ -609,17 +567,6 @@
 									<div class="card-header" id="headingThree8">
 										<div class="card-title collapsed" data-toggle="collapse" data-target="#collapseThree8" style="background: #ECECEC;">
 											<div class="card-label">Is this risky?</div>
-											<span class="svg-icon">
-												<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-right.svg-->
-												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<polygon points="0 0 24 0 24 24 0 24"></polygon>
-														<path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero"></path>
-														<path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)"></path>
-													</g>
-												</svg>
-												<!--end::Svg Icon-->
-											</span>
 										</div>
 									</div>
 									<div id="collapseThree8" class="collapse" data-parent="#accordionExample8">
@@ -627,30 +574,20 @@
 									</div>
 								</div>
 								<div class="card">
-									<div class="card-header" id="headingThree8">
-										<div class="card-title collapsed" data-toggle="collapse" data-target="#collapseThree8" style="background: #ECECEC;">
+									<div class="card-header" id="headingFour8">
+										<div class="card-title collapsed" data-toggle="collapse" data-target="#collapseFour8" style="background: #ECECEC;">
 											<div class="card-label">How long does it take to see results?</div>
-											<span class="svg-icon">
-												<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-right.svg-->
-												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<polygon points="0 0 24 0 24 24 0 24"></polygon>
-														<path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero"></path>
-														<path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999)"></path>
-													</g>
-												</svg>
-												<!--end::Svg Icon-->
-											</span>
 										</div>
 									</div>
-									<div id="collapseThree8" class="collapse" data-parent="#accordionExample8">
+									<div id="collapseFour8" class="collapse" data-parent="#accordionExample8">
 										<div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
 									</div>
 								</div>
 							</div>
 						</div>
+
 					</div>
-					<div class="mt-20" style="background: #E95059; padding: 50px;">
+					<div class="mt-20" style="background: #E95059; padding: 50px;" id="section8">
 						<div class="row justify-content-center">
 							<span class="col-sm-4 text-white text-center display4-lg">Start Boosting Your Rankings Now</span>
 							<button type="button" class="btn btn-secondary"><i class="fa far fa-clock"></i><span>Try For Free!</span></button>
@@ -743,12 +680,12 @@
 			$('#prev').on('click', function () {
 				var last = $('.profile').last().css({opacity: '0', width: '0px'});
 				last.prependTo('.userprofiles');
-				last.animate({opacity: '1', width: (profileWidht + 1 + 'px')});
+				last.animate({opacity: '1', width: (profileWidht + 20 + 'px')});
 			});
 			$('#next').on('click', function () {
 				var first = $('.profile').first();
 				first.animate({opacity: '0', width: '0px'}, function() {
-					first.appendTo('.userprofiles').css({opacity: '1', width: profileWidht + 'px'});
+					first.appendTo('.userprofiles').css({opacity: '1', width: profileWidht + 20 + 'px'});
 				});
 			});
 		</script>

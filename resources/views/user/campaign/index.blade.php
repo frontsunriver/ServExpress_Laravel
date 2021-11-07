@@ -1,4 +1,10 @@
 @extends('layouts.layout')
+@section('styles')
+@parent
+<style>
+    
+</style>
+@endsection
 @section('content')
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <div class="subheader py-2 py-lg-12 subheader-transparent" id="kt_subheader">

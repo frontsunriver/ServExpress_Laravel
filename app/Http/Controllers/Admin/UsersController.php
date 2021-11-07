@@ -15,19 +15,20 @@ class UsersController extends Controller
     public function index()
     {
         // abort_unless(\Gate::allows('user_access'), 403);
-        
-        $users = User::all();
         $menu = "users";
 
-        return view('admin.users.index', compact('users', 'menu'));
+        return view('admin.users.index', compact('menu'));
     }
 
     public function getUserList(Request $request)
     {
-        $users = User::all();
+        $start = $request->start;
+        $length = $request->length;
+        $users = User::skip($start)->take($length)->get();
+        $count = User::get()->count();
         $result['data'] = $users;
-        $result['recordsFiltered'] = $users->count();
-        $result['recordsTotal'] = $users->count();
+        $result['recordsFiltered'] = $count;
+        $result['recordsTotal'] = $count;
         return json_encode($result);
     }
 
