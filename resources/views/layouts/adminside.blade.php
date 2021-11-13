@@ -29,8 +29,8 @@
                     <span class="menu-text">Users</span>
                 </a>
             </li>
-            <li class="menu-item menu-item-submenu" aria-haspopup="true">
-                <a href="index.html" class="menu-link">
+            <li class="menu-item menu-item{{$menu == 'subscription' ? '-active': ''}}" aria-haspopup="true">
+                <a href="{{route('admin.subscription.index')}}" class="menu-link">
                     <span class="svg-icon menu-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -42,8 +42,8 @@
                     <span class="menu-text">Subscription Plan</span>
                 </a>
             </li>
-            <li class="menu-item menu-item-submenu" aria-haspopup="true">
-                <a href="index.html" class="menu-link">
+            <li class="menu-item menu-item{{$menu == 'base' ? '-active': ''}}" aria-haspopup="true">
+                <a href="{{route('admin.base.index')}}" class="menu-link">
                     <span class="svg-icon menu-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

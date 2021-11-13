@@ -54,7 +54,15 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('users/destroy', 'UsersController@massDestroy')->name('users.massDestroy');
 
     Route::resource('users', 'UsersController');
-    Route::post('/users/getUserList', 'UsersController@getUserList')->name('users.getUserList');
+    Route::post('/users/getUserList', 'UsersController@getUserList')->name('admin.users.getUserList');
+
+    Route::resource('subscription', 'SubscriptionController');
+    Route::post('/subscription/getList', 'SubscriptionController@getList')->name('admin.subscription.getList');
+
+    Route::get('base', 'BaseDataController@index')->name('base.index');
+    Route::post('base/getCountry', 'BaseDataController@getCountryList')->name('base.getCountry');
+    Route::post('base/getRegion', 'BaseDataController@getRegionList')->name('base.getRegion');
+    Route::post('base/getSearchEngin', 'BaseDataController@getSearchEnginList')->name('base.getSearchEngin');
 
     Route::delete('products/destroy', 'ProductsController@massDestroy')->name('products.massDestroy');
 
