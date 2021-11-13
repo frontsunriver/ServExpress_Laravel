@@ -64,6 +64,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('base/getRegion', 'BaseDataController@getRegionList')->name('base.getRegion');
     Route::post('base/getSearchEngin', 'BaseDataController@getSearchEnginList')->name('base.getSearchEngin');
 
+    Route::resource('campaign', 'CampaignController');
+    Route::post('/campaign/getList', 'CampaignController@getList')->name('admin.campaign.getList');
+
+    Route::resource('invoice', 'InvoiceController');
+    Route::post('/invoice/getList', 'InvoiceController@getList')->name('admin.invoice.getList');
+
     Route::delete('products/destroy', 'ProductsController@massDestroy')->name('products.massDestroy');
 
     Route::resource('products', 'ProductsController');
